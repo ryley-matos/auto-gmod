@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  gmod:
+    build:
+        context: .
+        args:
+            STEAM_AUTH_KEY: ${STEAM_AUTH_KEY}
+            STEAM_COLLECTION: ${STEAM_COLLECTION}
+    ports:
+      - "27015:27015/tcp"
+      - "27015:27015/udp"
