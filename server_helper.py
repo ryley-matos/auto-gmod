@@ -119,4 +119,5 @@ async def on_message(message):
 async def main():
     await discord_client.start(config['DISCORD_TOKEN'])
 
-asyncio.get_event_loop().run_until_complete(main())
+if __name__ == '__main__':
+    asyncio.get_event_loop().run_until_complete(main())
